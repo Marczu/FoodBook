@@ -1,31 +1,6 @@
-<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
-<!--<div class="container-fluid">-->
-<!--<div class="navbar-header">-->
-<!--<a href="#" class="navbar-brand">Food Book</a>-->
-<!--</div>-->
-
-<!--<div class="collapse navbar-collapse">-->
-<!--<ul class="nav navbar-nav">-->
-<!--<li><a href="#">Przepisy</a></li>-->
-<!--<li><a href="#">Lista zakupów</a></li>-->
-<!--</ul>-->
-<!--<ul class="nav navbar-nav navbar-right">-->
-<!--<li class="dropdown">-->
-<!--<a href="#" class="dropdown-toggle" role="button">Zarzadzaj</a>-->
-<!--<ul class="dropdown-menu">-->
-<!--<li><a href="#">Zapisz Dane</a></li>-->
-<!--<li><a href="#">Pobierz Dane</a></li>-->
-<!--</ul>-->
-<!--</li>-->
-<!--</ul>-->
-
-<!--</div>-->
-<!--</div>-->
-<!--</nav>-->
-
 <div class="container">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Food Book</a>
+    <a class="navbar-brand" routerLink="/">Food Book</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -33,22 +8,22 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#" (click)="onSelect('recipe')">Przepisy</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/recipes">Przepisy</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#" (click)="onSelect('shopping-list')">Lista Zakupów</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/shopping-list">Lista Zakupów</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown" appDropdown>
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          <a class="nav-link dropdown-toggle" style="cursor: pointer;" id="navbarDropdown" role="button" data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">
             Menu zarządzania
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Zapisz Dane</a>
-            <a class="dropdown-item" href="#">Pobierz Dane</a>
+            <a class="dropdown-item"  style="cursor: pointer;">Zapisz Dane</a>
+            <a class="dropdown-item"  style="cursor: pointer;">Pobierz Dane</a>
           </div>
         </li>
       </ul>

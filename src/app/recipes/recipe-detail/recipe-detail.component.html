@@ -4,7 +4,7 @@
       [src]="recipe.imagePath"
       alt="{{recipe.name}}"
       class="img-fluid"
-      style="max-height: 400px"
+      style="max-height: 400px; max-width: 500px "
     >
   </div>
 </div>
@@ -23,9 +23,9 @@
       </a>
 
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">Dodaj do listy zakupów</a>
-        <a class="dropdown-item" href="#">Edytuj przepis</a>
-        <a class="dropdown-item" href="#">Usuń przepis</a>
+        <a class="dropdown-item" style="cursor: pointer;" (click)="onAddToShoppingList()">Dodaj do listy zakupów</a>
+        <a class="dropdown-item" style="cursor: pointer;" (click)="onEditRecipe()">Edytuj przepis</a>
+        <a class="dropdown-item" style="cursor: pointer;">Usuń przepis</a>
       </div>
     </div>
 
@@ -38,7 +38,12 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    Składniki
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-action"
+      *ngFor="let ingredient of recipe.ingredients">
+        {{ingredient.name}} - {{ingredient.amount}}
+      </li>
+    </ul>
   </div>
 </div>
 
